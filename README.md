@@ -6,8 +6,14 @@ The example code has been borrowed from [tastejs/todomvc](https://github.com/tas
 
     npm install
 
-## Running
+## Build
 
     gulp
-    cd dist
-    python -m SimpleHTTPServer
+
+## Running with Python
+
+    cd dist && python -m SimpleHTTPServer
+
+## Running with Nodejs
+
+    npm start
