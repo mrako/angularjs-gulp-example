@@ -9,7 +9,7 @@ var react = require('gulp-react');
 var jshint = require('gulp-jshint');
 
 gulp.task('usemin', function() {
-  return gulp.src('./index.html')
+  return gulp.src('./app/*.html')
     .pipe(usemin({
       css: [ rev() ],
       html: [ minifyHtml({ empty: true }) ],
@@ -20,7 +20,7 @@ gulp.task('usemin', function() {
 });
 
 gulp.task('jshint', function() {
-  var stream = gulp.src(['js/**/*.js'])
+  var stream = gulp.src(['app/**/*.js'])
     .pipe(jshint())
     .pipe(jshint.reporter('default'));
 
