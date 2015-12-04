@@ -13,8 +13,8 @@ gulp.task('usemin', function() {
     .pipe(usemin({
       css: [ rev() ],
       html: [ minifyHtml({ empty: true }) ],
-      vendor: [ uglify(), rev() ],
-      app: [ uglify(), rev() ]
+      vendor: [ rev() ],
+      app: [ rev() ]
     }))
     .pipe(gulp.dest('dist/'));
 });
@@ -31,4 +31,4 @@ gulp.task('jshint', function() {
   return stream;
 });
 
-gulp.task('default', ['usemin']);
+gulp.task('default', ['jshint', 'usemin']);
